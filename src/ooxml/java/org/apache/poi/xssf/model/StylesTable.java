@@ -302,7 +302,7 @@ public class StylesTable extends POIXMLDocumentPart {
    }
 
 	public CTXf getCellStyleXfAt(int idx) {
-		return styleXfs.get(idx);
+		return idx < styleXfs.size() ? styleXfs.get(idx) : null;
 	}
 	public int putCellStyleXf(CTXf cellStyleXf) {
 		styleXfs.add(cellStyleXf);
